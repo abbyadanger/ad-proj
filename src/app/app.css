@@ -8,6 +8,10 @@
   flex-direction: column;
 }
 
+.header {
+  display: flex;
+}
+
 .name {
   font-weight: bold;
 }
@@ -34,4 +38,18 @@ a {
 
 a:hover, a:focus {
   text-decoration-color: #222; /* darker underline on hover */
+}
+
+/* Add this to your CSS file */
+.blinking-underscore {
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
 }
