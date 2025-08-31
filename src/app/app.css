@@ -1,0 +1,37 @@
+.content {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'IBM Plex Mono', monospace;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-weight: bold;
+}
+
+main {
+  background-color: #f1edde;
+}
+
+.footer {
+  margin-top: auto;
+  display: flex;
+  gap: 16px; /* optional: adds space between items */
+}
+
+/* Hyperlink Styling */
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  text-decoration-color: #bdbdbd; /* light gray underline */
+  transition: text-decoration-color 0.2s;
+}
+
+a:hover, a:focus {
+  text-decoration-color: #222; /* darker underline on hover */
+}
