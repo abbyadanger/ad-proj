@@ -9,7 +9,7 @@ export default `<!doctype html>
 <link rel="stylesheet" href="styles-5INURTSO.css"></head>
 <body ngcm="">
   <app-root></app-root>
-<script src="main-T446UTAZ.js" type="module"></script></body>
+<script src="main-6FXJOH4C.js" type="module"></script></body>
 </html>
 
 <style>
