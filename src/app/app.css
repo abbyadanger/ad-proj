@@ -32,8 +32,8 @@ main {
 }
 
 .footer-msg {
+  padding-top: 15%;
   font-size: xx-small;
-  position:fixed;
   bottom: 0px;
   width: 100%;
   text-align: center;
