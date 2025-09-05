@@ -1,16 +1,8 @@
 import { Routes } from '@angular/router';
-import { BlogPost } from './blog-post/blog-post';
-import { App } from './app';
+import { BlogList } from './blog-list/blog-list';
+import { Home } from './home/home';
 
 export const routes: Routes = [
-  {
-    path: 'blog/:filename',
-    component: BlogPost,
-    data: {
-      getPrerenderParams: () => [
-        { filename: 'first-blog-post.md' },
-      ]
-    }
-  },
-  { path: '', component: App },
+  { path: 'blog-list', component: BlogList },
+  { path: '', component: Home, pathMatch: 'full' }, // root just shows empty/home
 ];
