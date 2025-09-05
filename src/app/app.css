@@ -10,14 +10,18 @@
 
 .header {
   display: flex;
+  font-size: xx-large;
 }
 
-.name {
-  font-weight: bold;
+.header-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 main {
-  background-color: #f1edde;
+  background-color: #efe7d3;
+  color: #1a0089;
+  /* color: #eb5e3a; cool orange color */
 }
 
 .footer {
@@ -32,12 +36,12 @@ a {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
-  text-decoration-color: #bdbdbd; /* light gray underline */
+  text-decoration-color: #19008981; /* light gray underline */
   transition: text-decoration-color 0.2s;
 }
 
 a:hover, a:focus {
-  text-decoration-color: #222; /* darker underline on hover */
+  text-decoration-color: #1a0089; /* darker underline on hover */
 }
 
 /* Add this to your CSS file */
