@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
-import e from 'express';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-blog-list',
-  imports: [CommonModule, MatTableModule],
+  imports: [CommonModule, MatTableModule, RouterLink],
   templateUrl: './blog-list.html',
   styleUrl: './blog-list.css'
 })
