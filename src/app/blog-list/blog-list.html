@@ -10,7 +10,9 @@
         <!-- List of blog posts -->
         <table class="blog-posts">
             <tr *ngFor="let post of posts">
-                <td><a href="">{{post.name}}</a></td>
+                <td>
+                    <a [routerLink]="['/blog', post.slug]">{{ post.name }}</a>
+                </td>
                 <td class="date">{{post.date}}</td>
             </tr>
         </table>
