@@ -15,22 +15,10 @@ import { Observable } from 'rxjs';
 export class BlogPost {
 
   constructor(
-    private route: ActivatedRoute,
-    private firestore: Firestore
   ) {}
 
-  posts$!: Observable<any[]>;
-
   ngOnInit() {
-    this.posts$ = this.getPosts();
-    this.posts$.subscribe(posts => {
-      console.log(posts);
-    });
-  }
 
-  getPosts(): Observable<any> {
-    const postsRef = collection(this.firestore, 'posts');
-    return collectionData(postsRef, { idField: 'id' }) as Observable<any>;
   }
 
 }
