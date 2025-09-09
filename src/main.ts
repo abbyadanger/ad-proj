@@ -8,6 +8,5 @@ import { HttpClient } from '@angular/common/http';
 bootstrapApplication(App, {
   providers: [
     provideRouter(routes, withHashLocation()),
-    provideMarkdown(),
   ]
 });
