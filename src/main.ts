@@ -5,12 +5,12 @@ import { routes } from './app/app.routes';
 import { environment } from '././environments/environment';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 bootstrapApplication(App, {
   providers: [
     provideRouter(routes, withHashLocation()),
-    provideHttpClient(),
+    provideHttpClient(withFetch()),
     // For Google Firebase DB
       // provideFirebaseApp(() => initializeApp(environment.firebase)),
       // provideFirestore(() => getFirestore())

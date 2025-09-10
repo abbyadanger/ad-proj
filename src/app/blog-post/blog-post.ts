@@ -1,23 +1,19 @@
 import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { marked } from 'marked';
-import { PLATFORM_ID, Inject } from '@angular/core';
-
 
 @Component({
   selector: 'app-blog-post',
   standalone: true,
-  imports: [
-    RouterLink,
-  ],
+  imports: [RouterLink],
   templateUrl: './blog-post.html',
-  styleUrl: './blog-post.css'
+  styleUrls: ['./blog-post.css']
 })
 export class BlogPost {
 
-  htmlContent: string | null = null;
+  htmlContent: string = '';
 
   constructor(
     private http: HttpClient,
@@ -26,18 +22,19 @@ export class BlogPost {
   ) {}
 
   ngOnInit() {
-    const renderMode = this.route.snapshot.data['renderMode'];
-    if (renderMode === 'client' && isPlatformBrowser(this.platformId)) {
-      this.http.get('assets/posts/first-blog-post.md', { responseType: 'text' })
-        .subscribe({
-          next: md => {
-            this.htmlContent = marked.parse(md) as string;
-            console.log('HTML content loaded:', this.htmlContent); // ✅ log it here
+    const slug = this.route.snapshot.params['slug'] || 'first-blog-post';
+    const url = `assets/posts/${slug}.md`;
 
-          },
-          error: err => this.htmlContent = 'Post not found.'
-        });
-    }
+    this.http.get(url, { responseType: 'text' }).subscribe({
+      next: md => {
+        this.htmlContent = marked.parse(md) as string;
+        console.log(this.htmlContent);
+      },
+      error: err => {
+        console.error('Failed to load post:', err);
+        this.htmlContent = 'Post not found.';
+      }
+    });
   }
-
 }
+
