@@ -5,7 +5,7 @@ import { BlogPost } from './blog-post/blog-post';
 
 export const routes: Routes = [
   { path: '', component: Home, pathMatch: 'full' },
-  { path: 'ad-proj/blog', component: BlogList },
-  { path: 'ad-proj/blog/:slug', component: BlogPost, data: { renderMode: 'client' } },
+  { path: 'blog', component: BlogList },
+  { path: 'blog/:slug', component: BlogPost, data: { renderMode: 'client' } },
   { path: '**', redirectTo: '' }
 ];

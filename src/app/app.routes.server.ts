@@ -7,7 +7,7 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Prerender
   },
   {
-    path: 'ad-proj/blog/:slug',
+    path: 'blog/:slug',
     renderMode: RenderMode.Prerender,
     getPrerenderParams: async () => [
       { slug: 'first-blog-post' },
