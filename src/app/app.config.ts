@@ -12,10 +12,6 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
-    provideHttpClient(withFetch()),
     provideRouter(routes), provideClientHydration(withEventReplay()),
-    // For Google Firebase DB
-      // provideFirebaseApp(() => initializeApp(environment.firebase)),
-      // provideFirestore(() => getFirestore())
   ]
 };

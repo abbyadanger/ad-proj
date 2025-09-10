@@ -10,9 +10,5 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 bootstrapApplication(App, {
   providers: [
     provideRouter(routes, withHashLocation()),
-    provideHttpClient(withFetch()),
-    // For Google Firebase DB
-      // provideFirebaseApp(() => initializeApp(environment.firebase)),
-      // provideFirestore(() => getFirestore())
   ]
 });
