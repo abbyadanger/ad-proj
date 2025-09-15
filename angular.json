@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "aj-proj": {
+    "ad-proj": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -62,10 +62,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "aj-proj:build:production"
+              "buildTarget": "ad-proj:build:production"
             },
             "development": {
-              "buildTarget": "aj-proj:build:development"
+              "buildTarget": "ad-proj:build:development"
             }
           },
           "defaultConfiguration": "development"
