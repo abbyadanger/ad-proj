@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "abby-app": {
+    "aj-proj": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -62,10 +62,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "abby-app:build:production"
+              "buildTarget": "aj-proj:build:production"
             },
             "development": {
-              "buildTarget": "abby-app:build:development"
+              "buildTarget": "aj-proj:build:development"
             }
           },
           "defaultConfiguration": "development"

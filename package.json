@@ -1,19 +1,19 @@
 {
-  "name": "abby-app",
+  "name": "aj-proj",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href /abby-app/ && npm run copy-docs",
-    "copy-docs:win": "xcopy dist\\abby-app\\browser docs /E /I /Y",
-    "copy-docs:unix": "cp -r dist/abby-app/browser/* docs/",
+    "build": "ng build --base-href /aj-proj/ && npm run copy-docs",
+    "copy-docs:win": "xcopy dist\\aj-proj\\browser docs /E /I /Y",
+    "copy-docs:unix": "cp -r dist/aj-proj/browser/* docs/",
     "copy-docs": "npm run clean-docs && (npm run copy-docs:win || npm run copy-docs:unix)",
     "clean-docs:win": "if exist docs rmdir /s /q docs",
     "clean-docs:unix": "rm -rf docs",
     "clean-docs": "npm run clean-docs:win || npm run clean-docs:unix",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:abby-app": "node dist/abby-app/server/server.mjs"
+    "serve:ssr:aj-proj": "node dist/aj-proj/server/server.mjs"
   },
   "prettier": {
     "printWidth": 100,
